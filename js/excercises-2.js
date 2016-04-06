@@ -24,8 +24,18 @@ function maxOfThree(num1, num2, num3){
 // ---------------------
 
 function isVowel(char){
-  char = char.toLowerCase()
-  if ( char === "a" || "e" || "i" || "o" || "u" ){
+
+  char = char.toLowerCase();
+
+  if ( char === "a" ){
+    return true;
+  } else  if (char === "e"){
+    return true;
+  } else  if (char === "i"){
+      return true;
+    } else  if (char === "o"){
+    return true;
+  } else  if (char === "u"){
     return true;
   } else {
     return false;
