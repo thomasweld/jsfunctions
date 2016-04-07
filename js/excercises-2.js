@@ -47,7 +47,11 @@ function isVowel(char){
 // ---------------------
 
 function rovarspraket(phrase){
-    //...
+  phrase = phrase.toLowerCase();
+  var n = phrase.search(/[aeiuo]/);
+  switch (n){
+    case 0: phrase = phrase.
+  }
 }
 
 
