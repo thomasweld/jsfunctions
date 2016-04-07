@@ -19,20 +19,16 @@
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
 
-// function sum ( x, y ){
-//     return Number(x) + Number(y);
-// }
-
-// OR ?
-
 function sum ( x, y ){
-    x = Number(x)
-    y = Number(y);
+
+    if ( isNaN(numx) || isNaN(numy) ){
+      return "Both must be numbers!";
+    }
+
     return x + y;
 }
 
@@ -43,7 +39,6 @@ function sum ( x, y ){
 function avg ( x, y, z ){
   return ( Number(x) + Number(y) + Number(z)) / 3;
 }
-
 
 // Q3
 // Write a function called `getLength` that takes one
@@ -64,7 +59,6 @@ function greaterThan (param1, param2){
   return param1 < param2;
 }
 
-
 // Q5
 // Write a function called `greet` that takes a
 // single parameter and returns a string that
@@ -74,7 +68,6 @@ function greaterThan (param1, param2){
 function greet (name){
   return "Hello, " + name;
 }
-
 
 // Q6
 // Write a function called `madlib` that takes
@@ -91,7 +84,7 @@ function madlib (word1, word2, word3, word4){
   return "Iron " + word1 + " Frontend " + word2 + " Class is " + word3 + "! WhooHoo !! " + word4 + ", YEAH !!"
 }
 
-// MADLIB RESULTS 
+// MADLIB RESULTS
 // madlib("Yard", "Dev", "Awesome", "JavaScript")
 // "Iron Yard Frontend Dev Class is Awesome! WhooHoo !! JavaScript, YEAH !!"
 

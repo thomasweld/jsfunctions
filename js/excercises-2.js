@@ -10,7 +10,6 @@ function max( x, y ){
     }
 }
 
-
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
@@ -24,58 +23,35 @@ function maxOfThree(num1, num2, num3){
 // ---------------------
 
 function isVowel(char){
-
-  char = char.toLowerCase();
-
-  if ( char === "a" ){
-    return true;
-  } else  if (char === "e"){
-    return true;
-  } else  if (char === "i"){
-      return true;
-    } else  if (char === "o"){
-    return true;
-  } else  if (char === "u"){
-    return true;
-  } else {
+  var vowels = "aeiou";
+  var response = vowels.indexOf(char);
+  if (respnose === -1){
     return false;
   }
+  return true;
 }
+
 
 // ---------------------
 // Write a function translate() that will translate a text into "Rovarspraket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-// function rovarspraket(str) {
-//   var result;
-//   if (str.search(subtext) != -1) {
-//     result = ' contains ';
-//   } else {
-//     result = ' does not contain ';
-//   }
-//   console.log(str + result + subtext);
-// }
+function translate(phrase){
 
-//
-// function rovarspraket(phrase){
-//   phrase = phrase.toLowerCase();
-//
-//   for (var x = 0; x < str.length; x++){
-//     var c = str.charAt(x);
-//     if ( phrase.search(/[aeiuo]/)  )
-// 
-//     alert(c);
-// }
-//
-//   var n = phrase.search(/[aeiuo]/);
-//   switch (n){
-//     case 0: phrase = phrase.
-//   }
-//
-//   phrase.replace(regexp|substr, newSubStr|function[, flags])
-//
-// }
-//
+  var vowels = "aeiou ";
+  var result = "";
+
+  for (var i = 0; i < phrase.length; i++) {
+    var current = phrase[i];
+    if (vowels.indexOf(current) === -1){
+      result += current + "o" + current;
+    } else {
+      result += current;
+    }
+  }
+
+  return result;
+}
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
